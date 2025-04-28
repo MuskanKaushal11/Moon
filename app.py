@@ -30,7 +30,7 @@ def resnet_preprocess(img):
 def load_model():
     tf.keras.config.enable_unsafe_deserialization()
     model = tf.keras.models.load_model(
-        'Saved_Models/best_model.keras',
+        'model.keras',
         compile=False,
         custom_objects={'resnet_preprocess': resnet_preprocess}
     )
@@ -127,7 +127,6 @@ def main():
         st.markdown("---")
         st.header("About")
         st.write("MoonArc detects lunar phases using a CNN backend and Flutter frontend.")
-        # st.markdown("[GitHub Repo](https://github.com/your-repo)")
 
     if img_bytes:
         proc_img, found = preprocess_image(img_bytes)
