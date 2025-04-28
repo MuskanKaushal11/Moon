@@ -126,7 +126,7 @@ def main():
 
         st.markdown("---")
         st.header("About")
-        st.write("MoonArc detects lunar phases using a CNN backend and Flutter frontend.")
+        st.write("MoonArc detects lunar phases using a CNN based architecture.")
 
     if img_bytes:
         proc_img, found = preprocess_image(img_bytes)
